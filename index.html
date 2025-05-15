@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Algoritmos Evolutivos</title>
+  
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Algoritmos Evolutivos</h1>
+  </header>
+
+  <section>
+    <div class="box">
+      <h2>Hill Climbing</h2>
+      <p>Haz clic en el botón para simular una ejecución básica de Hill Climbing.</p>
+      <button onclick="ejecutarHillClimbing()">Ejecutar Hill Climbing</button>
+      <div id="resultado"></div>
+    </div>
+  </section>
+
+  <script>
+    function ejecutarHillClimbing() {
+      const soluciones = [
+        "Mejor solución encontrada: 87",
+        "Nueva solución óptima: 92",
+        "No se encontró una mejor solución",
+        "Máximo local alcanzado",
+        "Iteraciones completadas con éxito"
+      ];
+      const resultado = soluciones[Math.floor(Math.random() * soluciones.length)];
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+
+</body>
+</html>
