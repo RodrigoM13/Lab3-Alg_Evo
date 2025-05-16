@@ -18,7 +18,7 @@
 
       <img src="img/img1.jpg" alt="Imagen de Hill Climbing" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
 
-            <h3>Enunciado del problema</h3>
+      <h3>Enunciado del problema</h3>
       <p>
         Dado un conjunto de 10 franjas horarias, cada una con una duración (entre 1 y 3 horas) y una productividad (entre 1 y 10),
         seleccionar una combinación de franjas cuya duración total no exceda las 15 horas y cuya productividad total sea máxima.
@@ -32,10 +32,49 @@
     </div>
   </section>
 
+  <section>
+    <div class="box">
+      <h2>Algoritmos Genéticos</h2>
+
+      <img src="img/img2.jpg" alt="Imagen de Algoritmos Genéticos" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+
+      <h3>Enunciado del problema</h3>
+      <p>
+        Eres un estudiante de la UNS que quiere aprovechar al máximo sus 10 franjas horarias libres esta semana. Cada franja corresponde a un bloque de tiempo que puedes dedicar a actividades académicas o personales, como:
+      </p>
+      <ul>
+        <li>Estudiar en la Biblioteca Central frente al mar.</li>
+        <li>Participar en el taller de la FEPROS (¡siempre hay proyectos nuevos!).</li>
+        <li>Ir al Laboratorio de Sistemas a practicar código.</li>
+        <li>Descansar en la Playa Tortugas (¡el ceviche puede esperar!).</li>
+      </ul>
+      <p>
+        Cada franja tiene:
+      </p>
+      <ul>
+        <li><strong>Duración:</strong> Entre 1 y 3 horas.</li>
+        <li><strong>Productividad:</strong> Nivel del 1 al 10.</li>
+      </ul>
+      <p>
+        Seleccionar las franjas que maximicen tu productividad semanal sin superar las 15 horas totales usando algoritmos genéticos.
+      </p>
+
+      <button onclick="ejecutarGenetico()">Ejecutar Algoritmo Genético</button>
+      <div id="resultado-genetico" style="margin-top: 20px;"></div>
+      <iframe id="iframe-genetico" src="" style="display: none; width: 100%; height: 600px; border: none; margin-top: 20px;"></iframe>
+    </div>
+  </section>
+
   <script>
     function ejecutarHillClimbing() {
       const iframe = document.getElementById("iframe-hill");
       iframe.src = "notebooks/hill_climbing.html";
+      iframe.style.display = "block";
+    }
+
+    function ejecutarGenetico() {
+      const iframe = document.getElementById("iframe-genetico");
+      iframe.src = "notebooks/genetico_franjas.html";
       iframe.style.display = "block";
     }
   </script>
