@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Algoritmos Evolutivos</title>
-  
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -16,21 +15,28 @@
   <section>
     <div class="box">
       <h2>Hill Climbing</h2>
-      <p>Haz clic en el botón para simular una ejecución básica de Hill Climbing.</p>
-      
+
+      <h3>Enunciado del problema</h3>
+      <p>
+        Dado un conjunto de 10 franjas horarias, cada una con una duración (entre 1 y 3 horas) y una productividad (entre 1 y 10),
+        seleccionar una combinación de franjas cuya duración total no exceda las 15 horas y cuya productividad total sea máxima.
+        Se usará el algoritmo Hill Climbing para encontrar una solución óptima.
+      </p>
+
       <img src="img/img1.jpg" alt="Imagen de Hill Climbing" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
-      
+
       <button onclick="ejecutarHillClimbing()">Ejecutar Hill Climbing</button>
-      <div id="resultado"></div>
+
+      <div id="resultado" style="margin-top: 20px;"></div>
+      <iframe id="iframe-hill" src="" style="display: none; width: 100%; height: 600px; border: none; margin-top: 20px;"></iframe>
     </div>
   </section>
 
   <script>
     function ejecutarHillClimbing() {
-
-      ];
-      const resultado = soluciones[Math.floor(Math.random() * soluciones.length)];
-      document.getElementById("resultado").textContent = resultado;
+      const iframe = document.getElementById("iframe-hill");
+      iframe.src = "hill_climbing.html";
+      iframe.style.display = "block";
     }
   </script>
 
